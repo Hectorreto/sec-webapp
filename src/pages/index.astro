@@ -1,88 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 ---
 
 <Layout title="SEC">
 	<Header />
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section class="s1">
+			<div class="img"></div>
+			<div class="text">
+				<h1>El éxito está en su genética</h1>
+				<h3>¡Participa en las subastas de genética congelada!</h3>
+				<a href="" class="btn-secondary">¡Quiero participar!</a>
+			</div> 
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
+	.s1 {
+		height: 730px;
+		display: flex;
+		align-items: center;
+	}
+	.img {
+		height: 830px;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+
+		
+		transform: scaleX(-1);
+		background: linear-gradient(270deg, rgba(0, 0, 0, 0.70) 32.06%, rgba(0, 0, 0, 0.00) 97.7%), url(toro_holstein.jpg), lightgray 50%;		
+		background-size: cover;
+		background-position: center;
 	}
 	h1 {
-		font-size: 4rem;
+		margin: 0;
+		color: white;
+		text-wrap: balance;
+		
+		font-family: Roboto Slab;
+		font-size: 64px;
+		font-style: normal;
 		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+		line-height: 72px; /* 112.5% */
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	h3 {
+		margin-top: 16px;
+		margin-bottom: 16px;
+		color: white;
+		text-wrap: balance;
+		
+		font-family: Roboto Slab;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px; /* 125% */
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+	.text {
+		width: 457px;
+		margin-left: 140px;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	a {
+		display: inline-block;
 	}
 </style>

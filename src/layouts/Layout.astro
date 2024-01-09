@@ -22,17 +22,6 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--Primary-600: ;
-
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
@@ -42,15 +31,62 @@ const { title } = Astro.props;
 	body {
 		margin: 0;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+  .btn-primary {
+    padding: 8px 24px;
+    border: 0.5px solid var(--Primary-Primary, #19233E);
+    border-radius: 2px;
+    background: var(--Primary-Primary, #19233E);
+    text-decoration: none;
+    color: var(--Neutral-00, #FEFEFE);
+  }
+  .btn-secondary {
+    padding: 8px 24px;
+    border: 0.5px solid var(--Primary-Primary, #19233E);
+    border-radius: 2px;
+    background: var(--Neutral-00, #FEFEFE);
+    text-decoration: none;
+    color: var(--Primary-Primary, #19233E);
+  }
+	h1 {
+		font-family: Roboto Slab;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 72px; /* 112.5% */
+	}
+	h2 {
+		font-family: Roboto Slab;
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 64px; /* 114.286% */
+	}
+	h3 {
+		font-family: Roboto Slab;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px; /* 125% */
+	}
+	h4 {
+		font-family: Open Sans;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 32px; /* 133.333% */
+	}
+	h5 {
+		font-family: Roboto Slab;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px; /* 133.333% */
+	}
+	h6 {
+		font-family: Open Sans;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24px; /* 150% */
 	}
 </style>
