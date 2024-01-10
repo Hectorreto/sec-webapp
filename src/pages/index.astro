@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Section1 from '../components/Section1.astro';
 import Section2 from '../components/Section2.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="SEC">
@@ -12,13 +13,14 @@ import Section2 from '../components/Section2.astro';
 		<div class="separator"></div>
 		<Section2 />
 	</main>
+	<Footer />
 </Layout>
 
 <style>
 	.separator {
 		height: 160px;
 
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(wood-texture.jpg), lightgray 50%;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(wood-texture.webp), lightgray 50%;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}

@@ -1,0 +1,121 @@
+---
+const mapUrl = 'https://www.google.com/maps/dir/20.6700544,-103.3699328/ganaderia+san+angel+brangus/@20.7105158,-103.7331979,9z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8429285fbe677923:0xfc5dd50c4c5f2257!2m2!1d-102.7618263!2d20.7783456?entry=ttu'
+---
+
+<footer>
+  <div class="top-info">
+    <div class="card">
+      <h4>Navegación</h4>
+      <div class="card-container">
+        <div class="list">
+          <a href="">Inicio</a>
+          <a href="">Subastas activas</a>
+          <a href="">¿Cómo participar?</a>
+          <a href="">Beneficios</a>
+          <a href="">Nosotros</a>
+        </div>
+        <div class="list">
+          <a href="">Iniciar sesión</a>
+          <a href="">Registrarme</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Contacto</h4>
+      <div class="list">
+        <a href="">Celular: 3787070078</a>
+        <a href="">Teléfono: 3787827550</a>
+        <a href="">sanangelbrangus@gmail.com</a>
+        <a href="">poncho21ag@hotmail.com</a>
+        <div class="social-container">
+          <img class="social" src="instagram.svg" alt="Instagram">
+          <img class="social" src="facebook.svg" alt="Facebook">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Legal</h4>
+      <div class="list">
+        <a href="">San Ángel© 2006 - 2023</a>
+        <a href="">Todos los derechos reservados</a>
+        <a href="">Términos y condiciones</a>
+        <a href="">Aviso de privacidad</a>
+      </div>
+    </div>
+
+  </div>
+
+  <img class="logo" src="white-logo.webp" alt="San Angel DE LOS ALTOS">
+
+  <div class="bot-info">
+    <a href={mapUrl}>Libramiento Salvador Zúñiga, Km 3.5. Tepatitlán de Morelos, Jalisco. MX</a>
+    <a href="https://www.aleate.com/">Powered by Aleate® 2023</a>
+  </div>
+</footer>
+
+<style>
+  .social {
+    height: 32px;
+    width: 32px;
+  }
+  .social-container {
+    display: flex;
+    gap: 4px;
+  }
+  .bot-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-container {
+    display: flex;
+    gap: 32px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .top-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer {
+    padding: 64px 160px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    
+    background: linear-gradient(0deg, rgba(33, 24, 19, 0.75) 0%, rgba(33, 24, 19, 0.75) 100%), url(footer-background.webp), lightgray 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .logo {
+    width: 128px;
+  }
+  h4 {
+    color: white;
+  }
+  a {
+    color: var(--Text-White, #FBFAF8);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+    text-decoration: none;
+  }
+</style>
