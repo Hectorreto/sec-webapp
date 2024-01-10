@@ -1,0 +1,37 @@
+---
+interface Props {
+  type: 'primary' | 'secondary';
+  label: string;
+  size: 'S' | 'L'
+}
+
+const { label, type, size } = Astro.props;
+
+const className = `${type} ${size}`;
+---
+
+<a href="" class={className}>{label}</a>
+
+<style>
+  a {
+    border: 0.5px solid var(--Primary-Primary, #19233E);
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+  .S {
+    padding: 8px 24px;
+  }
+  .L {
+    padding: 12px 48px;
+  }
+  .primary {
+    background: var(--Primary-Primary, #19233E);
+    color: var(--Neutral-00, #FEFEFE);
+  }
+  .secondary {
+    background: var(--Neutral-00, #FEFEFE);
+    color: var(--Primary-Primary, #19233E);
+  }
+</style>
