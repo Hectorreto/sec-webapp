@@ -1,0 +1,92 @@
+---
+import StepCard from "./StepCard.astro";
+---
+
+<section>
+  <h2>¿Cómo participar?</h2>
+  <div class="content">
+    <div class="needs">
+      <h3>Necesitas</h3>
+      <div class="needs-container">
+        <p>Identificación oficial</p>
+        <p>Método de pago</p>
+      </div>
+    </div>
+    <div>
+      <h3>Pasos</h3>
+      <div>
+        <StepCard number="01" title="Regístrate" items={[
+          'Llena el formulario con tus datos.',
+          'Sube una fotografía de tu identificación.',
+        ]} />
+        <StepCard number="02" title="Explora" items={[
+          'Ve las subastas activas.',
+          'Para poder ver más información y participar en la subasta, deberás pagar una tarifa de $5,000 (puede ser través de tarjeta de crédito, débito, transferencia bancaria, depósito en efectivo o cheque).',
+        ]} />
+        <StepCard number="03" title="¡Ofrece tu mejor apuesta!" items={[
+          'Haz una oferta en el lote que te interese.',
+          'Las pujas se realizan en incrementos de $500.',
+        ]} />
+        <StepCard number="04" title="Recibe la confirmación de tu puja" items={[
+          'Después de hacer tu puja, recibirás una confirmación por correo y en la plataforma.',
+        ]} />
+        <StepCard number="05" title="Haz seguimiento de la subasta" items={[
+          'Sigue el progreso de la subasta.',
+          'Si alguien supera tu puja, tendrás la opción de hacer una puja más alta.',
+        ]} />
+        <StepCard number="06" title="Cierre de la subasta" items={[
+          'Cuando la subasta llegue a su fecha y hora de cierre, se anunciará el ganador de cada lote, quien recibirá una notificación por correo y en la plataforma y se le mostrará el estado de su cuenta.',
+        ]} />
+        <StepCard number="07" title="Pago" items={[
+          'El ganador tendrá 15 días para realizar el pago del monto acordado.',
+        ]} />
+      </div>
+    </div>
+    <div>
+      <h3>Reglas</h3>
+      <div>
+        <div>
+          <h6>Saldo mínimo</h6>
+          <p>Siempre debes de tener $5,000 en tu cuenta para poder participar en una subasta.</p>
+        </div>
+        <div>
+          <h6>Penalización</h6>
+          <p>Si no haces alguna puja, perderás los $5,000 que ingresaste.</p>
+        </div>
+        <div>
+          <h6>Plazo de pago</h6>
+          <p>Si eres ganador de una subasta, tienes 15 días para hacer el pago acordado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h3 {
+    text-align: center;
+  }
+  .needs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .needs-container {
+    display: flex;
+    gap: 80px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    margin-top: 64px;
+  }
+  section {
+    padding-top: 146px;
+    padding-bottom: 200px;
+  }
+  h2 {
+    text-align: center;
+  }
+</style>

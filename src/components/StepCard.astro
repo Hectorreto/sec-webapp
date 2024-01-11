@@ -1,0 +1,39 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  items: string[]
+}
+
+const { number, title, items } = Astro.props;
+---
+
+<div class="card">
+  <span>{number}</span>
+  <div>
+    <h4>{title}</h4>
+    <ul>
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    gap: 16px;
+  }
+  span {
+    color: var(--Neutral-Medium, #86756C);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Headline/H1 */
+    font-family: Roboto Slab;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px; /* 112.5% */
+  }
+</style>
